@@ -1,0 +1,26 @@
+/* in order to join 2 tables to display data from both as requested
+
+SELECT
+patients.patient_id,
+first_name,
+last_name
+FROM patients
+JOIN admissions ON admissions.patient_id = patients.patient_id
+WHERE primary_diagnosis = 'Dementia';
+
+/* selecting males from the patient records
+
+SELECT
+first_name,
+last_name,
+gender
+from patients
+where gender = 'M'
+;
+
+/* updating null field to show NKA for allergies as patient has no allergies as oppsoed to a missing value
+
+update patients
+set allergies = 'NKA'
+where allergies is null	
+;
