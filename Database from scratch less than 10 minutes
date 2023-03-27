@@ -1,0 +1,14 @@
+create database employees;
+
+create table employees
+(
+id int identity primary key,
+first_name varchar(30),
+last_name varchar(30) not null,
+email varchar(50) unique,
+salary int
+);
+
+insert into employees 
+( id, first_name, last_name, email, salary )
+values (1, 'john', 'doe', '123@email.com', 50000 );
